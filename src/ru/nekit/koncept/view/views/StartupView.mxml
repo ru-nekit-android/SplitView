@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View
+	xmlns:fx="http://ns.adobe.com/mxml/2009" 
+	xmlns:s="library://ns.adobe.com/flex/spark"
+	xmlns:mx="library://ns.adobe.com/flex/mx" 
+	xmlns:components="spark.components.*" 
+	title="Начало" >
+	
+	<s:Scroller width="100%" height="100%">
+		<s:Group width="100%" height="100%" >
+			<s:Group width="400" horizontalCenter="0" verticalCenter="0">
+				<components:ListFormShadowTop/>
+				<components:ListForm id="list" width="100%">
+					<components:itemRenderer>
+						<fx:Component>
+							<components:ListFormItemRenderer styleName="startupMenu" interactionMode="mouse"/>
+						</fx:Component>
+					</components:itemRenderer>
+				</components:ListForm>
+				<components:ListFormShadowBottom/>
+			</s:Group>	
+		</s:Group>
+	</s:Scroller>
+	
+</s:View>

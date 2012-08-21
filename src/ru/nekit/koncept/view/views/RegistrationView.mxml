@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View 
+	xmlns:fx="http://ns.adobe.com/mxml/2009" 
+	xmlns:s="library://ns.adobe.com/flex/spark" 
+	xmlns:mx="library://ns.adobe.com/flex/mx" 
+	xmlns:flexpad="com.flexpad.*"
+	title="Регистрация"
+	>
+	
+	<s:navigationContent>
+		<flexpad:BackButtonBlack label="Авторизация" id="back"/>
+	</s:navigationContent>
+	
+	<s:Scroller width="100%" height="100%">
+		<s:Group width="100%">
+			<s:VGroup width="400" paddingTop="10" paddingRight="0" paddingBottom="10"
+					  paddingLeft="10" horizontalCenter="0" verticalCenter="0">
+				<s:Form width="100%">
+					<s:FormItem label="Логин" width="100%" height="46">
+						<s:TextInput id="login" prompt="логин" width="100%"/>
+					</s:FormItem>
+					<s:FormItem label="Пароль" height="46">
+						<!--<s:HGroup>-->
+						<s:TextInput id="password" width="100%" prompt="пароль"/><!--displayAsPassword="{!displayAsPasswordFlag.selected}"/>-->
+						<!--<s:CheckBox label="Показать пароль" id="displayAsPasswordFlag"/>
+						</s:HGroup>-->
+					</s:FormItem>
+					<s:FormItem label="E-mail" width="100%" height="46">
+						<!--<s:HGroup width="100%" verticalAlign="middle">-->
+						<s:TextInput id="email_prefix" width="45%" prompt="mail@mail.ru"/>
+						<!--<s:Label text="@" width="10%"/>
+						<s:TextInput id="email_sufix" width="45%" prompt="mail.ru"/>
+						</s:HGroup>-->
+					</s:FormItem>
+					<s:FormItem label="Пол" width="100%" height="46">
+						<s:CheckBox skinClass="spark.skins.MobileCheckBoxSkin" width="60"/>
+						<!--<s:ToggleSwitch skinClass="spark.skins.ToggleSwitchSexSkin" width="200"/>-->
+					</s:FormItem>
+					<s:Group height="64">
+						<s:Button skinClass="spark.skins.mobile.BeveledActionButtonSkin" chromeColor="0x009900" id="registrationCall" width="100%" label="Регистрация" height="36" styleName="registerButton" horizontalCenter="-5" verticalCenter="0"/>
+					</s:Group>
+					
+				</s:Form>
+				
+			</s:VGroup>
+		</s:Group>
+	</s:Scroller>
+	
+</s:View>

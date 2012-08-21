@@ -1,0 +1,335 @@
+/* CSS file */
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace components "spark.components.*";
+@namespace flexpad "com.flexpad.*";
+@namespace esri "http://www.esri.com/2008/ags";
+
+global
+{
+	/*fontSize: 16;*/
+}
+
+esri|ScaleBar
+{
+	skinClass: ClassReference("ru.nekit.koncept.view.map.skin.ScaleBarSkin");
+}
+
+components|ListFormItemRenderer
+{
+	paddingLeft:0;
+}
+
+s|ActionBar
+{
+	paddingTop: 0;
+	paddingBottom: 0;
+	paddingLeft: 0;
+	paddingRight: 0;
+	chromeColor: #6D84A2;
+	defaultButtonAppearance: beveled;
+	skinClass: ClassReference("spark.skins.ios.ActionBarSkin");
+}
+
+s|Scroller
+{
+	verticalScrollPolicy:on;
+}
+
+s|View
+{
+	skinClass: ClassReference("spark.skins.ios.ViewSkin");
+}
+
+s|Form
+{
+	skinClass:ClassReference("spark.skins.FormSkin");
+	borderColor: #b4b7bb;
+	borderAlpha: 1;
+} 
+
+s|FormItem
+{
+	skinClass:ClassReference("com.pialabs.eskimo.skins.mobile.ios.FormItemSkin");
+	backgroundAlpha: 0;
+	color: #395A8F;
+} 
+
+s|FormItem #labelDisplay
+{
+	color: #000000;
+}
+
+s|FormItem #sequenceDisplay
+{
+	color: #000000;
+}
+
+s|FormItem s|TextInput
+{
+	borderVisible: false;
+	contentBackgroundAlpha: 0;
+	contentBackgroundColor: #333333;
+	focusAlpha: 0;
+}
+
+.mainMenu
+{
+	textAlign:left;
+}
+
+.startupMenu
+{
+ 	textAlign:center;
+}
+
+.mapInstruments
+{
+	textAlign:center;
+	paddingLeft:9;
+}
+
+.recoverButton
+{
+	chromeColor: #4A6A9B;
+	color: #FFFFFF;
+	textShadowColor: #000000;
+}
+
+.loginButton
+{
+	chromeColor: #4A6A9B;
+	color: #FFFFFF;
+	text-shadow-color: #000000;
+	font-size: 20px;
+}
+
+.registerButton
+{
+	chromeColor: #4A6A9B;
+	color: #FFFFFF;
+	textShadowColor: #000000;
+}
+
+.saveProfileButton
+{
+	chromeColor: #009900;
+	color: #FFFFFF;
+	textShadowColor: #000000;
+}
+
+s|ViewMenuItem
+{
+	iconPlacement: left;
+	color: #000000;
+	textShadowColor: #FFFFFF;
+	skinClass: ClassReference("spark.skins.ViewMenuItemSkin");
+}
+
+s|ViewMenuItem:down
+{
+	chromeColor: #0000FF;
+	color: #FFFFFF;
+	textShadowColor: #000000;
+}
+
+s|ViewMenuItem:hover
+{
+	chromeColor: #FFFFFF;
+	color: #FFFFFF;
+	textShadowColor: #000000;
+}
+
+components|ListForm
+{
+	skinClass: ClassReference("spark.skins.ListFormSkin");
+}
+
+components|ListForm #titleDisplay
+{
+	color: #FFFFFF;
+	fontSize: 20;
+}
+
+components|ListFormItemRenderer
+{
+	borderStyle: rounded;
+	cornerRadius: 10;
+}
+
+.inputField
+{
+	borderVisible: false;
+	contentBackgroundColor: #FFFFFF;
+}
+
+.componentContainerStyle
+{
+	skinClass: ClassReference("com.pialabs.eskimo.skins.ContainerSkin");
+}
+
+.listItemRenderer
+{
+	interactionMode:mouse;
+	autoDrawBackground:false;
+}
+
+.listItemRendererLabel
+{
+	font-family: HelveticaNeue;
+	font-weight: bold;
+	font-size: 17px;
+}
+
+.listItemRendererLabel:normal
+{
+	color: #040404;
+}
+
+.listItemRendererLabel:selected
+{
+	color: #FFFFFF;
+}
+
+.listItemRendererHintLabel{
+	font-family: HelveticaNeue;
+	font-size: 16px;
+}
+
+.listItemRendererHintLabel:normal
+{
+	color: #395587;
+}
+
+.listItemRendererHintLabel:selected
+{
+	color: #FFFFFF;
+}
+
+.hintText{
+	font-family: Helvetica;
+	font-size: 15px;
+	color: #b3b3b3;
+}
+
+flexpad|BarGreyLabel{
+	font-family: HelveticaNeue;
+	font-weight: bold;
+	color: #717880;
+	font-size: 14px;
+}
+
+flexpad|BarBlackLabel{
+	font-family: HelveticaNeue;
+	font-weight: bold;
+	color: #FFFFFF;
+	font-size: 14px;
+}
+
+flexpad|ButtonBlue #labelDisplay{
+	font-family: Helvetica;
+	color:#FFFFFF;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.buttonBarGreyButtonLabel{
+	font-family: Helvetica;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.buttonBarGreyButtonLabel:normal{
+	color: #4f5459;
+}
+
+.buttonBarGreyButtonLabel:selected{
+	color: #FFFFFF;
+}
+
+.buttonBarBlackButtonLabel{
+	font-family: Helvetica;
+	font-weight: bold;
+	font-size: 10px;
+	color: #FFFFFF;
+}
+
+.largeButtonBarGreyButtonLabel{
+	font-family: HelveticaNeue;
+	font-weight: bold;
+	font-size: 10px;
+}
+
+.largeButtonBarGreyButtonLabel:normal{
+	color: #7f7f7f;
+}
+
+.largeButtonBarGreyButtonLabel:selected{
+	color: #ffffff;
+}
+
+flexpad|HintTextInput{
+	font-family: Helvetica;
+	font-size: 15px;
+}
+
+flexpad|ButtonLabel{
+	font-family: HelveticaNeue;
+	font-weight: bold;
+	color: #FFFFFF;
+	font-size: 12px;
+}
+
+.tabBarBlackButtonLabel{
+	font-family: HelveticaNeue;
+	font-weight: bold;
+	color: #FFFFFF;
+	font-size: 10px;
+}
+.tabBarBlackButtonLabel:normal{
+	color: #c6c6c5;
+}
+
+.tabBarBlackButtonLabel:selected{
+	color: #FFFFFF;
+}
+
+flexpad|Switch{
+	font-family: HelveticaNeue;
+	font-weight: bold;
+	font-size: 17px;
+}
+
+flexpad|AlertPanelTitleLabel{
+	font-family: HelveticaNeue;
+	font-weight: bold;
+	font-size: 18px;
+	color: #FFFFFF;
+}
+
+flexpad|AlertPanelTextLabel{
+	font-family: HelveticaNeue;
+	font-weight: normal;
+	font-size: 16px;
+	color: #FFFFFF;
+}
+
+flexpad|AlertPanelButton{
+	font-family: HelveticaNeue;
+	font-weight: bold;
+	font-size: 18px;
+	color: #FFFFFF;
+}
+
+flexpad|CheckBox{
+	font-family: Helvetica;
+	font-weight: bold;
+	font-size: 12px;
+	color: #FFFFFF;
+}
+
+flexpad|RadioButton{
+	font-family: Helvetica;
+	font-weight: bold;
+	font-size: 12px;
+	color: #FFFFFF;
+}

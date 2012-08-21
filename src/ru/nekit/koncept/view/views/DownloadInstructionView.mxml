@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View 
+	xmlns:fx="http://ns.adobe.com/mxml/2009" 
+	xmlns:s="library://ns.adobe.com/flex/spark" 
+	xmlns:mx="library://ns.adobe.com/flex/mx"
+	xmlns:flexpad="com.flexpad.*"
+	xmlns:components="spark.components.*" 
+	title="Скачать"
+	>
+	
+	<s:navigationContent>
+		<flexpad:BackButtonBlack label="Скачать" id="back"/>
+	</s:navigationContent>
+	
+	<s:Scroller width="100%" height="100%">
+		<s:Group width="100%">
+			<s:VGroup gap="0" width="400" height="100%" horizontalCenter="0" horizontalAlign="center">
+				
+				<s:VGroup height="20%">
+					<components:iOSLabel text="Инструкции"/>
+					<components:iOSText text="Очки сделаны из восточно-индийского палисандра. К очкам можно докупить очешник за 30 долларов из клена с грецким орехом. Стоимость очков начинается от 145 долларов." horizontalCenter="0" top="40" fontSize="16" width="400"/>
+				</s:VGroup>
+				
+				<s:Spacer height="10"/>
+				
+				<s:SkinnableContainer width="100%" styleName="componentContainerStyle">
+					<s:Label id="url" width="100%"/>
+				</s:SkinnableContainer>
+				
+				<s:VGroup height="20%">
+					<components:iOSLabel text="Инструкции"/>
+					<components:iOSText text="Очки сделаны из восточно-индийского палисандра. К очкам можно докупить очешник за 30 долларов из клена с грецким орехом. Стоимость очков начинается от 145 долларов." horizontalCenter="0" top="40" fontSize="16" width="400"/>
+				</s:VGroup>
+				
+				<s:SkinnableContainer width="400" height="340" styleName="componentContainerStyle">
+					<s:BitmapImage id="qrCode" minHeight="300" minWidth="300" horizontalCenter="0"/>
+				</s:SkinnableContainer>
+				
+			</s:VGroup>
+		</s:Group>
+	</s:Scroller>
+	
+</s:View>

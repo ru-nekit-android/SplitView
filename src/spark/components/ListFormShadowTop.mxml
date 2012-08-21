@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:RectangularDropShadow 
+	xmlns:fx="http://ns.adobe.com/mxml/2009" 
+	xmlns:s="library://ns.adobe.com/flex/spark"
+	top="0" right="0" bottom="0"
+	left="0" distance="1" angle="-90" color="#999999"
+	blurY="0" blurX="0" alpha="0.5" tlRadius="10"
+	trRadius="10" blRadius="10" brRadius="10"
+	/>

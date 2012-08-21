@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application
+	xmlns:fx="http://ns.adobe.com/mxml/2009" 						
+	xmlns:s="library://ns.adobe.com/flex/spark" 
+	xmlns:flexpad="com.flexpad.*"
+	applicationDPI="160" 
+	>
+	
+	<fx:Style source="style.css"/>
+	
+	<s:creationComplete>
+		<![CDATA[
+		koncept.startup(this);
+		]]>
+	</s:creationComplete>
+	
+	<fx:Script>
+		<![CDATA[
+			
+			import ru.nekit.koncept.aSkyCity;
+			public const koncept:aSkyCity = aSkyCity.instance;
+			
+		]]>
+	</fx:Script>
+	
+	<s:SplitViewNavigator id="navigator" width="100%" height="100%">
+		<s:layout>
+			<s:BasicLayout/>
+		</s:layout>
+		<s:ViewNavigator id="menuNavigator" firstView="ru.nekit.koncept.view.views.MainMenu" x="-300" width="300" height="100%" depth="3" />
+		<s:ViewNavigator id="mainNavigator" firstView="ru.nekit.koncept.view.views.StartupView" width="100%" height="100%" depth="2"/>
+	</s:SplitViewNavigator>
+	
+	<fx:Declarations>
+		<s:Parallel id="showMenu" duration="600">
+			<s:Move target="{menuNavigator}" xTo="0"/>
+			<s:Move target="{mainNavigator}" xTo="301"/>
+		</s:Parallel>
+		<s:Parallel id="hideMenu" duration="600">
+			<s:Move target="{menuNavigator}" xTo="0"/>
+			<s:Move target="{mainNavigator}" xTo="0"/>
+		</s:Parallel>
+		<s:Parallel id="minimilzeMenu" duration="600">
+			<s:Move target="{menuNavigator}" xTo="-250"/>
+			<s:Move target="{mainNavigator}" xTo="51"/>
+		</s:Parallel>
+	</fx:Declarations>
+	
+</s:Application>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:ItemRenderer 
+	width="100%"
+	xmlns:fx="http://ns.adobe.com/mxml/2009"
+	xmlns:s="library://ns.adobe.com/flex/spark"
+	xmlns:mx="library://ns.adobe.com/flex/mx"
+	xmlns:flexpad="com.flexpad.*"
+	minHeight="0" 
+	autoDrawBackground="false"
+	>
+	
+	<fx:Script>
+		<![CDATA[
+			import mx.events.FlexEvent;
+			[Bindable]
+			public var hintField:String;
+			[Bindable]
+			public var iconField:String;
+			[Bindable]
+			public var iconRightPosition:Boolean;
+			
+			[Bindable]
+			override public function get selected():Boolean
+			{
+				return super.selected;
+			}
+			
+			override public function set selected(value:Boolean):void
+			{
+				super.selected = value;
+			}
+			
+			override public function get data():Object
+			{
+				return super.data;
+			}
+			
+			override public function set data(value:Object):void
+			{
+				super.data = value;
+				if(data){
+					if(hintField && hintField in data){
+						hintLabelHolder.text = data[hintField];
+					}
+					if(iconField){
+						iconHolder.source = data[iconField];
+					}
+				}
+				if( iconRightPosition ){
+					iconHolderContainer.right = 5;
+				}else{
+					iconHolderContainer.left = 7;
+				}
+			}
+		]]>
+	</fx:Script>
+	
+	<s:states>
+		<s:State name="normal" />
+		<s:State name="hovered" stateGroups="hoveredStates" />
+		<s:State name="selected" stateGroups="selectedStates" />
+		<s:State name="normalAndShowsCaret"/>
+		<s:State name="hoveredAndShowsCaret" stateGroups="hoveredStates"/>
+		<s:State name="selectedAndShowsCaret" stateGroups="selectedStates"/>
+	</s:states>
+	
+	<s:Rect top="0" bottom="2" left="0" right="0">
+		<s:fill.hoveredStates>
+			<s:LinearGradient rotation="-90">
+				<s:GradientEntry color="0x015fe6" alpha="0.2" />
+				<s:GradientEntry color="0x058cf5" alpha="0.2" />
+			</s:LinearGradient>
+		</s:fill.hoveredStates>
+		<s:fill.selectedStates>
+			<s:LinearGradient rotation="-90">
+				<s:GradientEntry color="0x015fe6" />
+				<s:GradientEntry color="0x058cf5" />
+			</s:LinearGradient>
+		</s:fill.selectedStates>
+	</s:Rect>
+	
+	<s:Group id="iconHolderContainer" width="40" height="100%">
+		<s:BitmapImage id="iconHolder" smooth="true" scaleMode="letterbox" top="7" bottom="7" horizontalCenter="0">
+			<s:transform.selectedStates>
+				<s:Transform>
+					<s:colorTransform>
+						<s:ColorTransform>
+							<s:color>0xffffff</s:color>
+						</s:ColorTransform>
+					</s:colorTransform>
+				</s:Transform>
+			</s:transform.selectedStates>
+			<s:filters.normal>
+				<s:DropShadowFilter 
+					color="0xFFFFFF"
+					angle="90"
+					alpha="1"
+					distance="1"
+					blurX="0"
+					blurY="0"/>
+			</s:filters.normal>
+		</s:BitmapImage>
+	</s:Group>
+	
+	<flexpad:ListItemRendererLabel 
+		left="{ iconRightPosition?10:(iconHolder.source?17+iconHolder.width:10)}" right="10" top="15" bottom="15"
+		currentState="{selected?'selected':'normal'}"
+		text="{label}"/>
+	
+	<flexpad:ListItemRendererHintLabel id="hintLabelHolder" 
+									   right="10" top="15" bottom="15"
+									   currentState="{selected?'selected':'normal'}"/>
+	
+	<s:Rect 
+		height="1"
+		left="0" right="0" bottom="0">
+		<s:fill>
+			<s:SolidColor 
+				color="0x181919"
+				alpha="0.08"/>
+		</s:fill>
+	</s:Rect>
+	
+	<s:Rect 
+		height="1"
+		left="0" right="0" bottom="-1">
+		<s:fill>
+			<s:SolidColor 
+				color="0xFFFFFF"
+				alpha="0.25"/>
+		</s:fill>
+	</s:Rect>
+	
+</s:ItemRenderer>

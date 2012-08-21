@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View
+	xmlns:fx="http://ns.adobe.com/mxml/2009" 
+	xmlns:s="library://ns.adobe.com/flex/spark"
+	xmlns:flexpad="com.flexpad.*"
+	xmlns:components="spark.components.*"
+	title="Ожидание гаджета" 
+	>
+	
+	<!--<s:navigationContent>
+	<flexpad:ButtonBlack label="Отмена" id="back"/>
+	</s:navigationContent>-->
+	
+	<s:Scroller width="100%" height="100%">
+		<s:Group width="100%" height="100%" >
+			<s:Group width="340" horizontalCenter="0" verticalCenter="0">
+				<components:ListFormShadowTop/>
+				<flexpad:Table
+					horizontalCenter="0" verticalCenter="0">
+					<flexpad:TableRow width="340" height="340">
+						<s:Group width="100%" height="100%">
+							<s:BusyIndicator horizontalCenter="0" verticalCenter="0" width="40" height="40"/>
+						</s:Group>
+						<s:BitmapImage id="qrCode" minHeight="300" minWidth="300" visible="false"/>
+					</flexpad:TableRow>
+					<flexpad:TableRow>
+						<s:Button skinClass="spark.skins.mobile.BeveledActionButtonSkin" chromeColor="0x376fe0" label="Отмена" id="back" width="100%" height="36"/>
+					</flexpad:TableRow>
+				</flexpad:Table>
+			</s:Group>
+		</s:Group>
+	</s:Scroller>
+	
+</s:View>

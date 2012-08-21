@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View 
+	xmlns:fx="http://ns.adobe.com/mxml/2009" 
+	xmlns:s="library://ns.adobe.com/flex/spark" 
+	xmlns:mx="library://ns.adobe.com/flex/mx" 
+	xmlns:flexpad="com.flexpad.*"
+	xmlns:components="spark.components.*"
+	width="100%"
+	height="100%"
+	title="Я">
+	
+	<s:Group width="100%" height="100%" >
+		<s:SkinnableContainer styleName="componentContainerStyle" left="20" top="20" right="20">
+			<s:HGroup width="100%" verticalAlign="middle" paddingLeft="10" paddingRight="20" gap="10">
+				<s:Group>
+					<s:Rect width="100%" height="100%" radiusX="10" radiusY="10">
+						<s:stroke>
+							<s:SolidColorStroke color="0x333333" weight="2"/>
+						</s:stroke>
+					</s:Rect>
+					<s:VGroup paddingBottom="20" paddingRight="20" paddingTop="20" paddingLeft="20">
+						<s:BitmapImage source="@Embed(source='happyface.png')"/>
+					</s:VGroup>
+				</s:Group>
+				<s:VGroup width="100%">
+					<s:Label text="Статус:" color="#666666"/>
+					<components:mTextInput width="100%"/>
+				</s:VGroup>
+			</s:HGroup>
+		</s:SkinnableContainer>
+		
+	</s:Group>
+	
+</s:View>

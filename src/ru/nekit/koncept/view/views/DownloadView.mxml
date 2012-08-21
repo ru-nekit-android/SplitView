@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View 
+	xmlns:fx="http://ns.adobe.com/mxml/2009" 
+	xmlns:s="library://ns.adobe.com/flex/spark" 
+	xmlns:mx="library://ns.adobe.com/flex/mx"
+	xmlns:flexpad="com.flexpad.*"
+	xmlns:components="spark.components.*" 
+	title="Скачать"
+	>
+	
+	<s:navigationContent>
+		<flexpad:BackButtonBlack label="Начало" id="back" width="70"/>
+	</s:navigationContent>
+	
+	<s:Scroller width="100%" height="100%">
+		<s:Group width="100%">
+			<components:iOSText text="Очки сделаны из восточно-индийского палисандра. К очкам можно докупить очешник за 30 долларов из клена с грецким орехом. Стоимость очков начинается от 145 долларов." horizontalCenter="0" top="40" fontSize="16" width="400"/>
+			<s:VGroup width="400" horizontalCenter="0" verticalCenter="0">
+				<components:iOSLabel text="Выберите мобильную платформу"/>
+				<s:Group width="100%">	
+					<components:ListFormShadowTop/>
+					<components:ListForm
+						id="list"
+						width="100%"
+						>
+						<components:layout>
+							<s:VerticalLayout variableRowHeight="false" rowHeight="46" gap="0"/>
+						</components:layout>
+						<components:itemRenderer>
+							<fx:Component>
+								<components:ListFormItemRenderer width="100%" iconField="icon" messageField="message" interactionMode="mouse"/>
+							</fx:Component>
+						</components:itemRenderer>
+					</components:ListForm>	
+					<components:ListFormShadowBottom/>
+				</s:Group>
+			</s:VGroup>
+		</s:Group>
+	</s:Scroller>
+	
+</s:View>

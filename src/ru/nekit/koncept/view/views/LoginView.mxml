@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View 
+	xmlns:fx="http://ns.adobe.com/mxml/2009"
+	xmlns:s="library://ns.adobe.com/flex/spark"
+	xmlns:mx="library://ns.adobe.com/flex/mx"
+	xmlns:flexpad="com.flexpad.*"
+	xmlns:components="spark.components.*" 
+	title="Авторизация">
+	
+	<s:navigationContent>
+		<flexpad:BackButtonBlack label="Начало" id="back"/>
+	</s:navigationContent>
+	
+	<s:Scroller width="100%" height="100%" depth="1">
+		<s:Group width="100%">
+			<s:VGroup 
+				paddingTop="10" paddingRight="10" paddingBottom="10"
+				paddingLeft="10" horizontalCenter="0" verticalCenter="0" gap="15"
+				>
+				<s:Form width="100%" height="100%">
+					<s:FormItem label="Логин" width="100%" height="46">
+						<s:TextInput id="login" width="100%" prompt="логин" height="46"/>
+					</s:FormItem>
+					<s:FormItem label="Пароль" width="100%" height="46">
+						<s:TextInput id="password" width="100%" displayAsPassword="true" prompt="пароль"/>
+					</s:FormItem>
+					<s:Group height="64">
+						<s:Button skinClass="spark.skins.mobile.BeveledActionButtonSkin" chromeColor="0x376fe0" id="loginCall" label="Авторизация" width="100%" fontSize="16" height="36" styleName="loginButton" horizontalCenter="-5" verticalCenter="0" interactionMode="mouse"/>
+					</s:Group>
+				</s:Form>	
+				<s:Group width="100%">
+					<components:ListFormShadowTop/>
+					<components:ListForm id="list" width="100%">
+						<components:itemRenderer>
+							<fx:Component>
+								<components:ListFormItemRenderer styleName="startupMenu" interactionMode="mouse"/>
+							</fx:Component>
+						</components:itemRenderer>
+					</components:ListForm>
+					<components:ListFormShadowBottom/>
+				</s:Group>
+			</s:VGroup>
+		</s:Group>
+	</s:Scroller>
+</s:View>
